@@ -16,3 +16,9 @@ print(result["requirements"])
 
 print("\n===== ARCHITECTURE =====\n")
 print(result["architecture"])
+
+print("\n===== BACKEND DESIGN =====\n")
+print(result["backend_design"])
+
+print("\n===== QA REPORT =====\n")
+print(result["qa_report"])
