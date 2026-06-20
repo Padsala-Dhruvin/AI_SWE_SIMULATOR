@@ -1,8 +1,11 @@
 from agents.product_manager import product_manager_agent
 from agents.architect import architect_agent
+from agents.backend import backend_agent
+from agents.qa import qa_agent
+from agents.reviewer import reviewer_agent
 
 state = {
-    "idea": "Build a food delivery app for university students",
+    "idea": "Build a food delivery app for students",
     "requirements": "",
     "architecture": "",
     "backend_design": "",
@@ -10,17 +13,10 @@ state = {
     "review_report": ""
 }
 
-print("\n===== PM AGENT =====\n")
-
 state = product_manager_agent(state)
-
-print(state["requirements"])
-
-print("\n===== ARCHITECT AGENT =====\n")
-
 state = architect_agent(state)
+state = backend_agent(state)
+state = qa_agent(state)
+state = reviewer_agent(state)
 
-print(state["architecture"])
-
-print("\n===== REVIEW REPORT =====\n")
-print(result["review_report"])
+print(state["review_report"])
