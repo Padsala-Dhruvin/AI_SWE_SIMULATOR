@@ -1,5 +1,11 @@
 from services.llm_factory import get_llm    
+from schemas.requirements import RequirementOutput
 llm = get_llm()
+
+structured_llm = llm.with_structured_output(
+RequirementOutput
+)
+
 
 def product_manager_agent(state):
     idea = state["idea"]
@@ -12,6 +18,6 @@ def product_manager_agent(state):
     
     Returen the structured output"""
     
-    response = llm.invoke(prompt)
-    state["requirements"] = response.content
+    result = structured_llm.invoke(prompt)
+    state["requirements"] = result.model_dump() if hasattr(result, "model_dump") else result
     return state

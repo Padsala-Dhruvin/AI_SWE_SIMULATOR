@@ -1,0 +1,43 @@
+Clean Architecture
+
+Clean Architecture organizes software into layers with clear separation of concerns.
+
+Core Principles:
+
+* Independence from frameworks
+* Independence from databases
+* Independence from user interfaces
+* Testability
+
+Layers
+
+1. Entities
+   Contains business rules and domain models.
+
+2. Use Cases
+   Contains application-specific business logic.
+
+3. Interface Adapters
+   Converts data between external systems and business logic.
+
+4. Frameworks and Drivers
+   Databases, APIs, web frameworks, and external services.
+
+Benefits:
+
+* Easier testing
+* Better maintainability
+* Reduced coupling
+* Improved scalability
+
+Common Mistakes:
+
+* Putting business logic inside controllers
+* Direct database access from presentation layer
+* Tight coupling between layers
+
+Best Practices:
+
+* Dependency inversion
+* Clear layer boundaries
+* Domain-driven design principles

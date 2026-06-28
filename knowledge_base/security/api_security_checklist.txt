@@ -1,0 +1,42 @@
+API Security Checklist
+
+Authentication:
+
+* JWT or OAuth2 required
+* Strong password hashing (bcrypt/argon2)
+
+Authorization:
+
+* Role-based access control (RBAC)
+* Least privilege principle
+
+Input Validation:
+
+* Validate all inputs
+* Prevent SQL injection
+* Prevent XSS
+
+Rate Limiting:
+
+* Prevent abuse and DDoS
+
+Transport Security:
+
+* Always use HTTPS
+
+Logging & Monitoring:
+
+* Log authentication attempts
+* Monitor suspicious activity
+
+Common Threats:
+
+* SQL Injection
+* Broken Authentication
+* API Abuse
+* Data Exposure
+
+Best Practices:
+
+* Never expose sensitive data in responses
+* Use API gateways for protection

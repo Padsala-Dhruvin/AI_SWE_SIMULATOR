@@ -1,0 +1,54 @@
+Caching Strategies
+
+1. Why Caching?
+
+* Improve performance
+* Reduce database load
+* Lower latency
+
+2. Types of Caching
+
+Client-Side Cache:
+
+* Browser caching
+* Local storage
+
+Server-Side Cache:
+
+* Redis
+* In-memory cache
+
+CDN Cache:
+
+* Static assets
+
+3. Cache Patterns
+
+Cache-Aside:
+
+* App checks cache first
+* If miss → fetch from DB → store in cache
+
+Write-Through:
+
+* Write to cache and DB simultaneously
+
+Write-Back:
+
+* Write to cache first, DB later
+
+4. Cache Expiration
+
+* Use TTL (Time To Live)
+* Avoid stale data
+
+5. Cache Invalidation Challenges
+
+* Hardest problem in caching
+* Must ensure consistency
+
+Best Practices:
+
+* Cache frequently read data
+* Avoid caching sensitive data
+* Use proper TTL strategy

@@ -1,0 +1,51 @@
+Event-Driven Architecture
+
+Event-Driven Architecture (EDA) is a design pattern where components communicate using events.
+
+Core Concepts
+
+Event:
+A record of something that happened in the system.
+
+Producer:
+Component that generates events.
+
+Consumer:
+Component that reacts to events.
+
+Message Broker:
+Infrastructure that routes events between services.
+
+Benefits:
+
+* Loose coupling
+* High scalability
+* Better resilience
+* Asynchronous communication
+
+Popular Technologies:
+
+* Apache Kafka
+* RabbitMQ
+* AWS EventBridge
+* Google Pub/Sub
+
+Use Cases:
+
+* Real-time notifications
+* Order processing
+* Payment workflows
+* IoT systems
+
+Challenges:
+
+* Event ordering
+* Event duplication
+* Debugging distributed systems
+
+Best Practices:
+
+* Use idempotent consumers
+* Implement retry mechanisms
+* Monitor event flow
+* Version event schemas

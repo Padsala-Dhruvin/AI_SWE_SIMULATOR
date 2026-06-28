@@ -1,0 +1,36 @@
+Performance Testing
+
+1. Purpose:
+   Measure system speed, stability, and scalability.
+
+2. Types:
+
+* Load Testing
+* Stress Testing
+* Spike Testing
+* Endurance Testing
+
+3. Key Metrics:
+
+* Response time
+* Throughput
+* Error rate
+* CPU/Memory usage
+
+4. Tools:
+
+* JMeter
+* Locust
+* k6
+
+5. Best Practices:
+
+* Test under realistic conditions
+* Gradually increase load
+* Monitor system bottlenecks
+
+6. Common Issues:
+
+* Database bottlenecks
+* Memory leaks
+* Unoptimized queries

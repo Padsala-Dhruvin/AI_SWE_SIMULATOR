@@ -4,6 +4,8 @@ class ProjectState(typedDict):
     idea: str
 
     requirements: str
+    
+    requirements: dict
 
     architecture: str
 
@@ -12,4 +14,3 @@ class ProjectState(typedDict):
     qa_report: str
 
     review_report: str
-    

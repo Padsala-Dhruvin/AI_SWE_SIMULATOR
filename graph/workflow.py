@@ -17,8 +17,6 @@ workflow.add_node(
     "reviewer",
     reviewer_agent
 )
-
-
 workflow.set_entry_point("product_manager")
 workflow.add_edge("product_manager", "architect")
 workflow.add_edge("architect", "backend")

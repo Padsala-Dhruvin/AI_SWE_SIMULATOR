@@ -1,0 +1,61 @@
+Monolith vs Microservices
+
+Monolithic Architecture
+
+A monolithic application is built and deployed as a single unit. All business logic, APIs, and data access layers are contained in one application.
+
+Advantages:
+
+* Simple development and deployment
+* Easier debugging
+* Lower operational complexity
+* Suitable for startups and small teams
+
+Disadvantages:
+
+* Difficult to scale individual components
+* Large codebase becomes harder to maintain
+* Slower deployment cycles
+
+Best Use Cases:
+
+* MVPs
+* Small teams
+* Products with limited complexity
+
+Microservices Architecture
+
+Microservices split an application into multiple independently deployable services. Each service owns a specific business capability.
+
+Advantages:
+
+* Independent deployment
+* Better scalability
+* Team autonomy
+* Technology flexibility
+
+Disadvantages:
+
+* Higher operational complexity
+* Distributed system challenges
+* Increased infrastructure costs
+
+Best Use Cases:
+
+* Large-scale applications
+* Multiple engineering teams
+* High scalability requirements
+
+Decision Guidelines
+
+Choose Monolith when:
+
+* Team size is small
+* Product is in early stages
+* Development speed is the priority
+
+Choose Microservices when:
+
+* Independent scaling is required
+* Multiple teams work simultaneously
+* System complexity is high

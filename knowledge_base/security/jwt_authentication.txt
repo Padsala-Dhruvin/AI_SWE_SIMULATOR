@@ -1,0 +1,41 @@
+JWT Authentication
+
+1. What is JWT?
+   JSON Web Token is a stateless authentication mechanism.
+
+2. Structure:
+   Header.Payload.Signature
+
+3. Workflow:
+
+4. User logs in
+
+5. Server generates JWT
+
+6. Client stores token
+
+7. Token sent in headers
+
+8. Advantages:
+
+* Stateless
+* Scalable
+* Fast authentication
+
+5. Risks:
+
+* Token theft
+* No easy revocation
+
+6. Best Practices:
+
+* Use short expiry times
+* Use refresh tokens
+* Store securely (HttpOnly cookies preferred)
+* Always use HTTPS
+
+7. Common Mistakes:
+
+* Storing JWT in localStorage
+* Long-lived tokens
+* No refresh strategy

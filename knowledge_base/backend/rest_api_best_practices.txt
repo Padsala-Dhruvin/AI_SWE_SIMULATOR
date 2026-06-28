@@ -1,0 +1,57 @@
+REST API Best Practices
+
+Core Principles:
+REST APIs should be simple, consistent, and stateless.
+
+1. Use Proper HTTP Methods
+
+* GET → Retrieve data
+* POST → Create data
+* PUT → Update full resource
+* PATCH → Partial update
+* DELETE → Remove resource
+
+2. Use Resource-Based URLs
+   Good:
+
+* GET /users
+* POST /orders
+
+Bad:
+
+* GET /getUsers
+* POST /createOrder
+
+3. Use Proper Status Codes
+
+* 200 OK → Success
+* 201 Created → Resource created
+* 400 Bad Request → Client error
+* 401 Unauthorized → Authentication required
+* 404 Not Found → Resource missing
+* 500 Internal Server Error → Server failure
+
+4. Versioning
+
+* /api/v1/users
+* /api/v2/users
+
+5. Pagination
+
+* /users?page=1&limit=20
+
+6. Filtering & Sorting
+
+* /products?category=electronics&sort=price_desc
+
+7. Security
+
+* Always use authentication (JWT/OAuth2)
+* Validate all inputs
+* Rate limiting
+
+Common Mistakes:
+
+* Verb-based URLs
+* No input validation
+* Ignoring status codes

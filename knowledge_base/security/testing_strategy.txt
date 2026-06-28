@@ -1,0 +1,38 @@
+Testing Strategy
+
+1. Testing Pyramid:
+
+* Unit Tests (base)
+* Integration Tests (middle)
+* End-to-End Tests (top)
+
+2. Unit Testing:
+
+* Test individual functions
+* Fast and isolated
+
+3. Integration Testing:
+
+* Test system components together
+
+4. End-to-End Testing:
+
+* Full system flow testing
+
+5. What to Test:
+
+* Business logic
+* API responses
+* Edge cases
+* Error handling
+
+Best Practices:
+
+* Write tests before fixing bugs
+* Automate tests in CI/CD
+* Keep tests independent
+
+Common Mistakes:
+
+* Only manual testing
+* Ignoring edge cases

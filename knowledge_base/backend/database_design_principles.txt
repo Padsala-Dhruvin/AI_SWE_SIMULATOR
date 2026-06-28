@@ -1,0 +1,42 @@
+Database Design Principles
+
+1. Normalization
+
+* Reduce data redundancy
+* Use proper relational design
+
+2. Primary Keys
+
+* Every table must have a unique identifier
+
+3. Foreign Keys
+
+* Maintain relationships between tables
+
+4. Indexing
+
+* Use indexes for frequently queried fields
+* Avoid over-indexing
+
+5. Data Types
+
+* Use correct types (INT, VARCHAR, TIMESTAMP)
+
+6. Avoid Overloading Tables
+
+* One table = one responsibility
+
+7. Scalability Considerations
+
+* Partition large tables
+* Consider sharding for large systems
+
+8. Transactions
+
+* Ensure ACID properties for critical operations
+
+Common Mistakes:
+
+* Storing JSON everywhere without structure
+* No indexing strategy
+* Poor relationship design
