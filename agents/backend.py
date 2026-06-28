@@ -1,18 +1,16 @@
 from services.llm_factory import get_llm
-
+from prompts.backend_prompt import BACKEND_PROMPT
+from knowledge.knowledge_service import knowledge_service
 llm = get_llm()
 
 def backend_agent(state):
-    prompt = f""" you are a Senior backend developer. Your task is to design the backend for the following idea: {state['idea']}
-    Requirements: {state['requirements']}
-    Architecture: {state['architecture']}
-    create :
-    1.REST API design
-    2.Database schema
-    3.Authentication Strategy
-    4.Service Structure
-    Returen the structured output"""
+    knowledge = knowledge_service.search(state["idea"])
     
+    prompt = BACKEND_PROMPT.format(
+        idea=state["idea"],
+        requirements=state["requirements"],
+        architecture=state["architecture"],
+    )
     response = llm.invoke(prompt)
     state["backend_design"] = response.content
     return state

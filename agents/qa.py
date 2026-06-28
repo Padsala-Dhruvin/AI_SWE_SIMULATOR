@@ -1,34 +1,17 @@
 from services.llm_factory import get_llm
-
+from prompts.qa_prompt import QA_PROMPT
+from knowledge.knowledge_service import knowledge_service
 llm = get_llm()
 
 def qa_agent(state):
 
-    prompt = f"""
-    You are a Senior QA Engineer.
-
-    Project Idea:
-    {state["idea"]}
-
-    Requirements:
-    {state["requirements"]}
-
-    Architecture:
-    {state["architecture"]}
-
-    Backend Design:
-    {state["backend_design"]}
-
-    Generate:
-
-    1. Functional Test Cases
-    2. Edge Cases
-    3. Security Tests
-    4. Performance Tests
-    5. Major Risks
-
-    Return structured output.
-    """
+    knowledge = knowledge_service.search(state["idea"])
+    prompt = QA_PROMPT.format(
+        knowledge=knowledge,
+        idea=state["idea"],
+        requirements=state["requirements"],
+        backend_design=state["backend_design"],
+    )
 
     response = llm.invoke(prompt)
 
